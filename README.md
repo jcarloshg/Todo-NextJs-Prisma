@@ -1,7 +1,12 @@
 # About it
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+- This project use [Prisma](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma) && [Next with Prisma](https://vercel.com/guides/nextjs-prisma-postgres)
+
+-Use pagination from [Prisma](https://www.prisma.io/docs/orm/prisma-client/queries/pagination) && [NextJs](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+
+- Use [YUP](https://www.npmjs.com/package/yup)
 
 ### Run environment locally
 
@@ -22,8 +27,22 @@ pnpm dev
 bun dev
 ```
 
+3. Rename the file `.env.template` by `.env`.
+4. Replace the environment variables.
+5. Enter to [localhost:3000/api/speed](localhost:3000/api/speed)
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+#### Prisma
+```bash
+npx prisma init
+
+# get models from prisma
+npx prisma migrate dev
+
+# get models from prisma
+npx prisma generate
+```
 
 
 ### Learn More
