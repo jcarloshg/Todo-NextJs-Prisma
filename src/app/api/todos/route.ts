@@ -64,3 +64,20 @@ export async function POST(req: Request) {
     }
 
 }
+
+export async function DELETE(req: Request) {
+
+    try {
+
+        const deleteManyResponse = await prisma.todo.deleteMany({ where: { complete: true } });
+
+        return NextResponse.json({ counter: deleteManyResponse.count });
+
+    } catch (error) {
+
+
+        return NextResponse.json({ message: "Ocurrio un problema", error }, { status: 400 });
+
+    }
+
+}

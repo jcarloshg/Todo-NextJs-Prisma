@@ -11,13 +11,17 @@
 ### Run environment locally
 
 1. Run Database
+
 ```bash
 docker compose up -d
 ```
 
-
 2. Run FrontEnd
+
 ```bash
+# install node_modules
+npm install
+
 npm run dev
 # or
 yarn dev
@@ -27,13 +31,24 @@ pnpm dev
 bun dev
 ```
 
-3. Rename the file `.env.template` by `.env`.
-4. Replace the environment variables.
+3. Create copy from `.env.template`, and rename by `.env`.
+4. Run the next commands
+
+```bash
+
+# get models from prisma
+npx prisma migrate dev
+
+# get models from prisma
+npx prisma generate
+```
+
 5. Enter to [localhost:3000/api/speed](localhost:3000/api/speed)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 #### Prisma
+
 ```bash
 npx prisma init
 
@@ -43,7 +58,6 @@ npx prisma migrate dev
 # get models from prisma
 npx prisma generate
 ```
-
 
 ### Learn More
 
